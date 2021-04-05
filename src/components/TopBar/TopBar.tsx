@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 
-export const LeftMenu: FC = () => {
+export const TopBar: FC = () => {
     return(
-        <>LeftMenu</>
+        <>TopBar</>
     );
 };
