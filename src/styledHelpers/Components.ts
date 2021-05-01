@@ -5,6 +5,8 @@ export type Styles = {
     [ruleOrSelector: string]: string | number | Styles,
 }
 
+
+
 const boxShadow = (): Styles => {
     return {
         color: `${Colors.black}`
@@ -12,7 +14,7 @@ const boxShadow = (): Styles => {
 };
 
 export const Wrapper = styled.div`
-    background: grey;
+    background: ${Colors.white};
     display: flex;
     justify-content: center;
     padding: 5px;
