@@ -3,34 +3,33 @@ import styled from 'styled-components';
 
 import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
-import { Colors } from '../../styledHelpers/Colors';
 
 const Wrapper = styled.div`
+    max-width:
+
+
 `;
 
 const Content = styled.div`
     max-width: 1200px;
-    align-items: center;
-    display: flex;
-`;
-
-const InnerWrapper = styled.div`
-    width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
 `;
+
+const RightContent = styled.div`
+    flex: 1;
+`;
+ 
 
 const MainPage: FC = () => {
     return (
         <Wrapper>
             <TopBar />
             <Content>
-                <InnerWrapper>
                     <LeftMenu />
-                    <div>Content</div>
-                </InnerWrapper>
+                    <RightContent>Content</RightContent>
             </Content>
         </Wrapper>
     );

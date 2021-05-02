@@ -14,7 +14,6 @@ const boxShadow = (): Styles => {
 };
 
 export const Wrapper = styled.div`
-    background: ${Colors.white};
     display: flex;
     justify-content: center;
     padding: 5px;
