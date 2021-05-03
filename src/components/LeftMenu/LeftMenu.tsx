@@ -7,18 +7,37 @@ const Wrapper = styled.div`
 const Card = styled.div`
 `;
 const Header = styled.div`
+    text-align: center;
 `;
 const ImageWrapper = styled.div`
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
 `;
 const CardList = styled.div`
 `;
 const CardItem = styled.div`
+
+
+
 `;
 const LinkContainer = styled.div`
 `;
 const NetworkIcon = styled.i`
+    background-image: url('./media/network.svg');
+    background-size: 16px;
 `;
 const PublicationsIcon = styled.i`
+    background-image: url('./media/publications.svg');
+    background-size: 16px;
+
 `;
 const Navigation = styled.div`
 `;

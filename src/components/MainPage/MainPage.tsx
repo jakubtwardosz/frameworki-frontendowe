@@ -5,7 +5,7 @@ import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
 
 const Wrapper = styled.div`
-    max-width:
+    
 
 
 `;
