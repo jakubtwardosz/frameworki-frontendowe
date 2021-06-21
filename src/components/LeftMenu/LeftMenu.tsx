@@ -2,12 +2,12 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    flex: 230px 0;
+    flex: 230px 0;    
+`;
+const Card = styled.div`
     box-shadow: 0 4px 2px -2px #DEE1E6;
     border-radius: 5px;
     border: 1px solid #EAECEF;
-`;
-const Card = styled.div`
 `;
 const Header = styled.div`
     text-align: center;
@@ -58,7 +58,7 @@ const NetworkIcon = styled.i`
 `;
 const PublicationsIcon = styled.i`
     display: inline-block;
-    background-image: url(/media/icons/publications.png);
+    background-image: url(/media/icons/publications.svg);
     background-size: 20px;
     width: 20px;
     height: 17px;
@@ -70,10 +70,40 @@ const Navigation = styled.div`
 const List = styled.ul`
 `;
 const ListItem = styled.li`
+    display: flex;
+    align-items: center;
+    margin: 16px 20px;
+    a{
+        text-decoration: none;
+        color: #4B5268;
+    }
+`;
+const PublicationsIcon2 = styled.i`
+    display: inline-block;
+    background-image: url(/media/icons/publications.svg);
+    background-size: 28px;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    margin-right: 17px;
 `;
 const EcosystemIcon = styled.i`
+    display: inline-block;
+    background-image: url(/media/icons/ecosystem.svg);
+    background-size: 28px;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    margin-right: 17px;
 `;
 const EntitiesIcon = styled.i`
+    display: inline-block;
+    background-image: url(/media/icons/entities.svg);
+    background-size: 28px;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    margin-right: 17px;
 `;
 const NetworkButton = styled.button`
     display: inline-block;
@@ -86,26 +116,23 @@ const NetworkButton = styled.button`
     border-radius: 5px;    
     background-repeat: no-repeat;
     background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
 `;
-
 const PublicationsButton = styled.button`
-
     display: inline-block;
     background-image: url(/media/icons/plus.svg);
     background-size: 16px;
-    width: 16px;
-    height: 13px;
+    background-position: center;
+    width: 30px;
+    height: 22px;
+    border: 1px solid #4B5268;
+    border-radius: 5px;    
     background-repeat: no-repeat;
-
-    border: none;
-    coursor: pointner;
-
-
-
+    background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
 `;
-
-
-
 
 export const LeftMenu: FC = () => {
     return(
@@ -141,7 +168,7 @@ export const LeftMenu: FC = () => {
             <Navigation>
                 <List>
                     <ListItem>
-                        <PublicationsIcon/>
+                        <PublicationsIcon2/>
                         <a href='#'>Publications</a>
                     </ListItem>
                     <ListItem>
