@@ -2,20 +2,32 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    flex: 0.2;
+    flex: 230px 0;
+    box-shadow: 0 4px 2px -2px #DEE1E6;
+    border-radius: 5px;
+    border: 1px solid #EAECEF;
 `;
 const Card = styled.div`
 `;
 const Header = styled.div`
     text-align: center;
+    border-bottom: 1px solid #EAECEF;
+    padding: 10px;
+    p{
+        color: #2A3F9D;
+        font: 500 16px 'Roboto';
+        margin: 8px 0;        
+    }
+    span{            
+        font: 300 14px 'Roboto';        
+    }
 `;
 const ImageWrapper = styled.div`
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto;
-
+    margin: auto;
     img{
         width: 100%;
         height: 100%;
@@ -24,20 +36,34 @@ const ImageWrapper = styled.div`
 const CardList = styled.div`
 `;
 const CardItem = styled.div`
-
-
-
+    margin: 12px 16px;
 `;
 const LinkContainer = styled.div`
+    display: flex;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: #232C47;
+        font: 500 16px 'Roboto';
+    }
 `;
 const NetworkIcon = styled.i`
-    background-image: url('./media/network.svg');
-    background-size: 16px;
+    display: inline-block;
+    background-image: url(/media/icons/network.png);
+    background-size: 20px;
+    width: 20px;
+    height: 17px;
+    background-repeat: no-repeat;
+    margin-right: 8px;   
 `;
 const PublicationsIcon = styled.i`
-    background-image: url('./media/publications.svg');
-    background-size: 16px;
-
+    display: inline-block;
+    background-image: url(/media/icons/publications.png);
+    background-size: 20px;
+    width: 20px;
+    height: 17px;
+    background-repeat: no-repeat;
+    margin-right: 8px;
 `;
 const Navigation = styled.div`
 `;
@@ -49,18 +75,49 @@ const EcosystemIcon = styled.i`
 `;
 const EntitiesIcon = styled.i`
 `;
+const NetworkButton = styled.button`
+    display: inline-block;
+    background-image: url(/media/icons/user-plus.svg);
+    background-size: 16px;
+    background-position: center;
+    width: 30px;
+    height: 22px;
+    border: 1px solid #4B5268;
+    border-radius: 5px;    
+    background-repeat: no-repeat;
+    background-color: transparent;
+`;
+
+const PublicationsButton = styled.button`
+
+    display: inline-block;
+    background-image: url(/media/icons/plus.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 13px;
+    background-repeat: no-repeat;
+
+    border: none;
+    coursor: pointner;
+
+
+
+`;
+
+
 
 
 export const LeftMenu: FC = () => {
     return(
-        <Wrapper>
+        
+            <Wrapper>
             <Card>
                 <Header>
                     <ImageWrapper>
                         <img src='./media/employee-photo.jpg' alt="Employee photo"/>
                     </ImageWrapper>
-                    <span>Humberta Swift</span>
-                    <p>Job title - Company</p>
+                    <p>Humberta Swift</p>
+                    <span>Job title - Company</span>
                 </Header>
 
                 <CardList>
@@ -68,18 +125,19 @@ export const LeftMenu: FC = () => {
                         <LinkContainer>
                             <NetworkIcon/>
                             <a href='#'>Your network</a>
-                        </LinkContainer>
-                        <button/>
+                            <NetworkButton/>
+                        </LinkContainer>                        
                     </CardItem>
                     <CardItem>
                         <LinkContainer>
                             <PublicationsIcon/>
                             <a href='#'>Your publications</a>
+                            <PublicationsButton/>
                         </LinkContainer>
-                        <button/>
                     </CardItem>
                 </CardList>
             </Card>
+
             <Navigation>
                 <List>
                     <ListItem>
@@ -93,9 +151,12 @@ export const LeftMenu: FC = () => {
                     <ListItem>
                         <EntitiesIcon/>
                         <a href='#'>Entities</a>
-                    </ListItem>
+                    </ListItem> 
                 </List>
             </Navigation>
-        </Wrapper>
+            </Wrapper>
+            
+        
+        
     );
 };

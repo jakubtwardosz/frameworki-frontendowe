@@ -68,6 +68,10 @@ const MenuWrapper = styled.div`
 `;
 
 const LeftSide = styled.div`
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+    padding: 0 10px;
 `;
 
 
@@ -87,8 +91,8 @@ export const TopBar: FC = () => {
                     <LeftSide onClick={menuHandler}>
                         <img src="./media/icons/house.png" alt=""/>
                         <span>Home</span>
+                        <img src="./media/icons/arrow-down.png" alt=""/>
                     </LeftSide>
-                    <img src="./media/icons/arrow-down.png" alt=""/>
                     {dropdownOpen &&
                         
                         <ExpandedMenu /> 

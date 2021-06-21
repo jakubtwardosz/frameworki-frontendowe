@@ -16,6 +16,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 20px 0;
 `;
 
 const RightContent = styled.div`
