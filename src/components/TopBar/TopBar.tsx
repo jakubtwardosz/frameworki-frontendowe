@@ -7,8 +7,9 @@ import { Colors } from '../../styledHelpers/Colors';
 import { ExpandedMenu } from './ExpandedMenu';
 
 const Wrapper2 = styled(Wrapper)`
-    padding: 10px;
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0);
+    padding: 7px;
+    box-shadow: 0 4px 2px -2px #e0e3e7;
+    background-color: #FFF;
 `;
 
 const InnerWrapper = styled.div`
@@ -26,8 +27,8 @@ const Logo = styled.img`
 
 const SearchImg = styled.img`
     position: absolute;
-    top: 7px;
-    right: 7px;
+    top: 9px;
+    right: 9px;
 `;
 
 const RightIcons = styled.div`
@@ -43,6 +44,7 @@ const CustomInput = styled.input`
     padding: 8px;
     width: 530px;
     text-align: center;
+    font: 300 16px 'Roboto';
 
     &:hover {
         outline: none;
@@ -61,7 +63,7 @@ const IconWrapper = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    margin: 0 5px;
+    margin: 0 4px;
 `;
 
 const MenuWrapper = styled.div`
@@ -69,9 +71,25 @@ const MenuWrapper = styled.div`
 
 const LeftSide = styled.div`
     display: flex;
-    justify-content: center; /* align horizontal */
     align-items: center;
-    padding: 0 10px;
+`;
+
+const HouseIcon = styled.i`
+    background-image: url(/media/icons/house.svg);
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    margin-right: 14px;
+`;
+
+const ArrowIcon = styled.i`
+    background-image: url(/media/icons/arrow-down.svg);
+    background-size: 9px;
+    width: 9px;
+    height: 6px;
+    background-repeat: no-repeat;
+    margin-left: 140px;
 `;
 
 
@@ -89,9 +107,9 @@ export const TopBar: FC = () => {
                 <Logo src="./media/logo.png"/> 
                 <MenuWrapper ref={wrapperRef}>
                     <LeftSide onClick={menuHandler}>
-                        <img src="./media/icons/house.png" alt=""/>
+                        <HouseIcon/>
                         <span>Home</span>
-                        <img src="./media/icons/arrow-down.png" alt=""/>
+                        <ArrowIcon/>
                     </LeftSide>
                     {dropdownOpen &&
                         

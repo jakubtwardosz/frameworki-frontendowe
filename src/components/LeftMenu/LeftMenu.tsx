@@ -8,6 +8,7 @@ const Card = styled.div`
     box-shadow: 0 4px 2px -2px #DEE1E6;
     border-radius: 5px;
     border: 1px solid #EAECEF;
+    background-color: #FFFFFF;
 `;
 const Header = styled.div`
     text-align: center;
@@ -72,10 +73,11 @@ const List = styled.ul`
 const ListItem = styled.li`
     display: flex;
     align-items: center;
-    margin: 16px 20px;
+    margin: 20px 16px;
     a{
         text-decoration: none;
         color: #4B5268;
+        font-weight: 500;
     }
 `;
 const PublicationsIcon2 = styled.i`

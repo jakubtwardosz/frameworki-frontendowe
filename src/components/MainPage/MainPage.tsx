@@ -5,6 +5,7 @@ import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
 
 const Wrapper = styled.div`
+    background-color: #F5F7F9;
     
 
 
@@ -21,6 +22,7 @@ const Content = styled.div`
 
 const RightContent = styled.div`
     flex: 1;
+    margin-left: 40px;
 `;
  
 
