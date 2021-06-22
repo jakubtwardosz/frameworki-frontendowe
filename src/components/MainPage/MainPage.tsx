@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
+import { Colors } from '../../styledHelpers/Colors';
 
 const Wrapper = styled.div`
-    background-color: #F5F7F9;
-    
+    background-color: ${Colors.culturedBackground}; 
 
 
 `;

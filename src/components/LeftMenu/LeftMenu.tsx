@@ -1,21 +1,22 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { Colors } from '../../styledHelpers/Colors';
 
 const Wrapper = styled.div`
     flex: 230px 0;    
 `;
 const Card = styled.div`
-    box-shadow: 0 4px 2px -2px #DEE1E6;
+    box-shadow: 0 4px 2px -2px ${Colors.gainsboro};
     border-radius: 5px;
-    border: 1px solid #EAECEF;
-    background-color: #FFFFFF;
+    border: 1px solid ${Colors.cultured};
+    background-color:${Colors.white};
 `;
 const Header = styled.div`
     text-align: center;
-    border-bottom: 1px solid #EAECEF;
+    border-bottom: 1px solid ${Colors.cultured};
     padding: 10px;
     p{
-        color: #2A3F9D;
+        color: ${Colors.denimBlue};
         font: 500 16px 'Roboto';
         margin: 8px 0;        
     }
@@ -44,7 +45,7 @@ const LinkContainer = styled.div`
     align-items: center;
     a{
         text-decoration: none;
-        color: #232C47;
+        color: ${Colors.spaceCadet};
         font: 500 16px 'Roboto';
     }
 `;
@@ -76,7 +77,7 @@ const ListItem = styled.li`
     margin: 20px 16px;
     a{
         text-decoration: none;
-        color: #4B5268;
+        color: ${Colors.independence};
         font-weight: 500;
     }
 `;
@@ -114,7 +115,7 @@ const NetworkButton = styled.button`
     background-position: center;
     width: 30px;
     height: 22px;
-    border: 1px solid #4B5268;
+    border: 1px solid ${Colors.independence};
     border-radius: 5px;    
     background-repeat: no-repeat;
     background-color: transparent;
@@ -128,7 +129,7 @@ const PublicationsButton = styled.button`
     background-position: center;
     width: 30px;
     height: 22px;
-    border: 1px solid #4B5268;
+    border: 1px solid ${Colors.independence};
     border-radius: 5px;    
     background-repeat: no-repeat;
     background-color: transparent;
