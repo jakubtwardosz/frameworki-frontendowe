@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Colors } from '../../styledHelpers/Colors';
+import { LeftMenuIcon } from '../../styledHelpers/Components';
+import { LeftMenuButton } from '../../styledHelpers/Components';
+import { BelowLeftMenuIcon } from '../../styledHelpers/Components';
 
 const Wrapper = styled.div`
     flex: 230px 0;    
@@ -49,23 +52,11 @@ const LinkContainer = styled.div`
         font: 500 16px 'Roboto';
     }
 `;
-const NetworkIcon = styled.i`
-    display: inline-block;
+const NetworkIcon = styled(LeftMenuIcon)`
     background-image: url(/media/icons/network.png);
-    background-size: 20px;
-    width: 20px;
-    height: 17px;
-    background-repeat: no-repeat;
-    margin-right: 8px;   
 `;
-const PublicationsIcon = styled.i`
-    display: inline-block;
+const PublicationsIcon = styled(LeftMenuIcon)`
     background-image: url(/media/icons/publications.svg);
-    background-size: 20px;
-    width: 20px;
-    height: 17px;
-    background-repeat: no-repeat;
-    margin-right: 8px;
 `;
 const Navigation = styled.div`
 `;
@@ -81,60 +72,20 @@ const ListItem = styled.li`
         font-weight: 500;
     }
 `;
-const PublicationsIcon2 = styled.i`
-    display: inline-block;
+const PublicationsIcon2 = styled(BelowLeftMenuIcon)`    
     background-image: url(/media/icons/publications.svg);
-    background-size: 28px;
-    width: 28px;
-    height: 28px;
-    background-repeat: no-repeat;
-    margin-right: 17px;
 `;
-const EcosystemIcon = styled.i`
-    display: inline-block;
-    background-image: url(/media/icons/ecosystem.svg);
-    background-size: 28px;
-    width: 28px;
-    height: 28px;
-    background-repeat: no-repeat;
-    margin-right: 17px;
+const EcosystemIcon = styled(BelowLeftMenuIcon)`    
+    background-image: url(/media/icons/ecosystem.svg);    
 `;
-const EntitiesIcon = styled.i`
-    display: inline-block;
-    background-image: url(/media/icons/entities.svg);
-    background-size: 28px;
-    width: 28px;
-    height: 28px;
-    background-repeat: no-repeat;
-    margin-right: 17px;
+const EntitiesIcon = styled(BelowLeftMenuIcon)`    
+    background-image: url(/media/icons/entities.svg);    
 `;
-const NetworkButton = styled.button`
-    display: inline-block;
+const NetworkButton = styled(LeftMenuButton)`    
     background-image: url(/media/icons/user-plus.svg);
-    background-size: 16px;
-    background-position: center;
-    width: 30px;
-    height: 22px;
-    border: 1px solid ${Colors.independence};
-    border-radius: 5px;    
-    background-repeat: no-repeat;
-    background-color: transparent;
-    margin-left: auto;
-    cursor: pointer;
 `;
-const PublicationsButton = styled.button`
-    display: inline-block;
-    background-image: url(/media/icons/plus.svg);
-    background-size: 16px;
-    background-position: center;
-    width: 30px;
-    height: 22px;
-    border: 1px solid ${Colors.independence};
-    border-radius: 5px;    
-    background-repeat: no-repeat;
-    background-color: transparent;
-    margin-left: auto;
-    cursor: pointer;
+const PublicationsButton = styled(LeftMenuButton)`    
+    background-image: url(/media/icons/plus.svg);    
 `;
 
 export const LeftMenu: FC = () => {
