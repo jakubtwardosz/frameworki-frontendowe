@@ -105,6 +105,7 @@ export const TopBar: FC = () => {
         <Wrapper2>
             <InnerWrapper>
                 <Logo src="./media/logo.png"/> 
+
                 <MenuWrapper ref={wrapperRef}>
                     <LeftSide onClick={menuHandler}>
                         <HouseIcon/>
@@ -116,6 +117,8 @@ export const TopBar: FC = () => {
                         <ExpandedMenu /> 
                     }
                 </MenuWrapper>
+
+                
                 <SearchWrapper>
                     <CustomInput type="text" placeholder="Search Legalcluster" />
                     <SearchImg src="./media/icons/search.png" alt="" title=""/>
