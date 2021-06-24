@@ -18,6 +18,15 @@ export const Wrapper = styled.div`
     ${boxShadow()};
 `;
 
+export const ExpandedMenuIcon = styled.i`
+    display: inline-block;
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    margin-right: 14px;
+`;
+
 export const LeftMenuIcon = styled.i`
     display: inline-block;
     background-size: 20px;

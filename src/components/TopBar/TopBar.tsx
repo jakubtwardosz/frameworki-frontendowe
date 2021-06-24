@@ -67,6 +67,8 @@ const IconWrapper = styled.div`
 `;
 
 const MenuWrapper = styled.div`
+    position: relative;
+    cursor: pointer;
 `;
 
 const LeftSide = styled.div`
@@ -118,7 +120,7 @@ export const TopBar: FC = () => {
                     }
                 </MenuWrapper>
 
-                
+
                 <SearchWrapper>
                     <CustomInput type="text" placeholder="Search Legalcluster" />
                     <SearchImg src="./media/icons/search.png" alt="" title=""/>
