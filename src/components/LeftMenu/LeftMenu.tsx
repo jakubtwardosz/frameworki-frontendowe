@@ -24,6 +24,9 @@ const Header = styled.div`
         font: 500 16px 'Roboto';
         margin: 8px 0;        
     }
+    a{
+        text-decoration: none;
+    }
     span{            
         font: 300 14px 'Roboto';        
     }

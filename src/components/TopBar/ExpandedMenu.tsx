@@ -34,7 +34,11 @@ const MenuContainer = styled.div`
         margin: 5px 0;
     }
     ul li{
-        margin: 15px 0;
+        margin: 15px 0;        
+    }
+    ul li a{
+        text-decoration: none;
+        color: #232C47;
         display: flex;
         align-items: center;
     }
@@ -42,10 +46,18 @@ const MenuContainer = styled.div`
 const InnerWrapper = styled.div`
     margin: 10px;
     
+    
     ul li{
         margin: 15px 0;
+        
+    }
+
+    ul li a{
+        color: #232C47;
+
         display: flex;
         align-items: center;
+        text-decoration: none;
     }
 `;
 const AccountContainer = styled.div`
@@ -56,13 +68,14 @@ const AccountContainer = styled.div`
     }
 
 `;
-const ProfileLink = styled.a`
-    display: flex;
+const ProfileLink = styled(Link)`    
     margin: 15px 0;
+    display: flex;
     align-items: center;
+    text-decoration: none;    
  p{
      font: 400 16px 'Roboto';
-
+     color: #232C47;
  }
  span{
      font: 400 14px 'Roboto';
@@ -128,7 +141,7 @@ const ImageContainer = styled.div`
         width: 100%;
     height: 100%;
     }
-
+ 
 `;
 export const ExpandedMenu: FC = () => {
     return(
@@ -157,8 +170,7 @@ export const ExpandedMenu: FC = () => {
             <AccountContainer>
                 <InnerWrapper>
                     <span>Account</span>
-                    <ProfileLink>
-                        <Link to="/profile">
+                    <ProfileLink to="/profile">
                             <ImageContainer>
                                 <img src='./media/employee-photo.jpg' alt="Employee photo"/>
                             </ImageContainer>
@@ -166,8 +178,7 @@ export const ExpandedMenu: FC = () => {
                                 <p>Jeane-Marie de la cli...</p>
                                 <span>See profile</span>
                             </div>
-                        </Link>
-                    </ProfileLink>
+                    </ProfileLink> 
                     <ul>
                         <li><Link to="/testpage"><PrivacyIcon/>Privacy</Link></li>
                         <li><Link to="/testpage"><SettingsIcon/>Settings</Link></li>
