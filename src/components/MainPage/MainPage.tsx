@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-// import {
-//     BrowserRouter as Router,
-//     Switch,
-//     Route,
-//     Link
-//   } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
