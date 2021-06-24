@@ -157,10 +157,6 @@ export const ExpandedMenu: FC = () => {
             <MenuContainer>
                 <InnerWrapper>
                     <FilterInput type="text" placeholder="Filter..." value={inputText} onChange={inputHandler} />
-                    
-                    
-                    
-                    
                     <span>Platform</span>
                     <ul>
                         {'Home'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/"><HomeIcon/>Home</Link></li>}
