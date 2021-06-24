@@ -45,8 +45,7 @@ export const LeftMenuButton = styled.button`
     border: 1px solid ${Colors.independence};
     border-radius: 5px;    
     background-repeat: no-repeat;
-    background-color: transparent;
-    margin-left: auto;
+    background-color: transparent;    
     cursor: pointer;
 `;
 

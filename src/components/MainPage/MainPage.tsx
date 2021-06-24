@@ -14,6 +14,9 @@ import { Colors } from '../../styledHelpers/Colors';
 import { Slider } from '../Slider/Slider';
 import { Workspaces } from '../Workspaces/Workspaces';
 import { Resume } from '../Resume/Resume';
+import { Entities } from '../../entities/Entities';
+import { TestPage } from '../../testPage/TestPage';
+import { Profile } from '../../profile/Profile';
 
 const Wrapper = styled.div`
     background-color: ${Colors.culturedBackground};
@@ -31,24 +34,36 @@ const Content = styled.div`
 const RightContent = styled.div`
     flex: 1;
     margin-left: 40px;
-`;
-
-
- 
+`; 
 
 const MainPage: FC = () => {
     return (
-        <Wrapper>
-            <TopBar />
-            <Content>
-                    <LeftMenu />
-                    <RightContent>
-                        <Slider />
-                        <Workspaces />
-                        <Resume />
-                    </RightContent>
-            </Content>
-        </Wrapper>
+        <Router>            
+            <Wrapper>
+                <TopBar />
+                <Content>
+                        <LeftMenu />
+                        <RightContent>
+                            <Switch>
+                                <Route path="/testpage" exact>
+                                    <TestPage />
+                                </Route>
+                                <Route path="/entities" exact>
+                                    <Entities />
+                                </Route>
+                                <Route path="/profile" exact>
+                                    <Profile />
+                                </Route>
+                                <Route path="/" exact>                                    
+                                    <Slider />
+                                    <Workspaces />
+                                    <Resume />
+                                </Route>
+                            </Switch>
+                        </RightContent>
+                </Content>
+            </Wrapper>
+        </Router>
     );
 };
 

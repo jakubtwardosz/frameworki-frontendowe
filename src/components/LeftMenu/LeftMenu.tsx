@@ -4,6 +4,7 @@ import { Colors } from '../../styledHelpers/Colors';
 import { LeftMenuIcon } from '../../styledHelpers/Components';
 import { LeftMenuButton } from '../../styledHelpers/Components';
 import { BelowLeftMenuIcon } from '../../styledHelpers/Components';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
     flex: 230px 0;    
@@ -51,6 +52,10 @@ const LinkContainer = styled.div`
         color: ${Colors.spaceCadet};
         font: 500 16px 'Roboto';
     }
+
+    a:last-child {
+        margin-left: auto;
+    }
 `;
 const NetworkIcon = styled(LeftMenuIcon)`
     background-image: url(/media/icons/network.png);
@@ -71,6 +76,7 @@ const ListItem = styled.li`
         color: ${Colors.independence};
         font-weight: 500;
     }
+    
 `;
 const PublicationsIcon2 = styled(BelowLeftMenuIcon)`    
     background-image: url(/media/icons/publications.svg);
@@ -94,26 +100,28 @@ export const LeftMenu: FC = () => {
             <Wrapper>
             <Card>
                 <Header>
+                    <Link to="/profile">
                     <ImageWrapper>
                         <img src='./media/employee-photo.jpg' alt="Employee photo"/>
                     </ImageWrapper>
                     <p>Humberta Swift</p>
                     <span>Job title - Company</span>
+                    </Link>
                 </Header>
 
                 <CardList>
                     <CardItem>
                         <LinkContainer>
                             <NetworkIcon/>
-                            <a href='#'>Your network</a>
-                            <NetworkButton/>
+                            <Link to="/testpage">Your network</Link>
+                            <Link to="/testpage"><NetworkButton/></Link>
                         </LinkContainer>                        
                     </CardItem>
                     <CardItem>
                         <LinkContainer>
-                            <PublicationsIcon/>
-                            <a href='#'>Your publications</a>
-                            <PublicationsButton/>
+                            <PublicationsIcon/>                            
+                            <Link to="/testpage">Your publications</Link>
+                            <Link to="/testpage"><PublicationsButton/></Link>
                         </LinkContainer>
                     </CardItem>
                 </CardList>
@@ -123,15 +131,15 @@ export const LeftMenu: FC = () => {
                 <List>
                     <ListItem>
                         <PublicationsIcon2/>
-                        <a href='#'>Publications</a>
+                        <Link to="/testpage">Publications</Link>
                     </ListItem>
                     <ListItem>
                         <EcosystemIcon/>
-                        <a href='#'>Ecosystem</a>
+                        <Link to="/testpage">Ecosystem</Link>
                     </ListItem>
                     <ListItem>
                         <EntitiesIcon/>
-                        <a href='#'>Entities</a>
+                        <Link to="/entities">Entities</Link>
                     </ListItem> 
                 </List>
             </Navigation>

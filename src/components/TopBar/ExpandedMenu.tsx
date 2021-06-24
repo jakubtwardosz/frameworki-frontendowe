@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Colors } from '../../styledHelpers/Colors';
 
 import { ExpandedMenuIcon } from '../../styledHelpers/Components';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
     position: absolute;
@@ -137,19 +138,19 @@ export const ExpandedMenu: FC = () => {
                     <FilterInput type="text" placeholder="Filter..."/>
                     <span>Platform</span>
                     <ul>
-                        <li><HomeIcon/>Home</li>
-                        <li><PublicationsIcon/>Publications</li>
-                        <li><PeopleIcon/>People</li>
-                        <li><EntitiesIcon/>Entities</li>
-                        <li><AdministrationIcon/>Administration</li>
+                        <li><Link to="/"><HomeIcon/>Home</Link></li>
+                        <li><Link to="/testpage"><PublicationsIcon/>Publications</Link></li>
+                        <li><Link to="/testpage"><PeopleIcon/>People</Link></li>
+                        <li><Link to="/entities"><EntitiesIcon/>Entities</Link></li>
+                        <li><Link to="/testpage"><AdministrationIcon/>Administration</Link></li>
                     </ul>
                     <span>Workspaces</span>
                     <ul>
-                        <li><PublicationsIcon/>Client contract</li>
-                        <li><PublicationsIcon/>Supplier contract</li>
-                        <li><CorporateIcon/>Corporate</li>
-                        <li><PeopleIcon/>Group Norms</li>
-                        <li><PublicationsIcon/>Real estate contracts</li>
+                        <li><Link to="/testpage"><PublicationsIcon/>Client contract</Link></li>
+                        <li><Link to="/testpage"><PublicationsIcon/>Supplier contract</Link></li>
+                        <li><Link to="/testpage"><CorporateIcon/>Corporate</Link></li>
+                        <li><Link to="/testpage"><PeopleIcon/>Group Norms</Link></li>
+                        <li><Link to="/testpage"><PublicationsIcon/>Real estate contracts</Link></li>
                     </ul>
                 </InnerWrapper>
             </MenuContainer>
@@ -157,17 +158,19 @@ export const ExpandedMenu: FC = () => {
                 <InnerWrapper>
                     <span>Account</span>
                     <ProfileLink>
-                        <ImageContainer>
-                            <img src='./media/employee-photo.jpg' alt="Employee photo"/>
-                        </ImageContainer>
-                        <div>
-                            <p>Jeane-Marie de la cli...</p>
-                            <span>See profile</span>
-                        </div>
+                        <Link to="/profile">
+                            <ImageContainer>
+                                <img src='./media/employee-photo.jpg' alt="Employee photo"/>
+                            </ImageContainer>
+                            <div>
+                                <p>Jeane-Marie de la cli...</p>
+                                <span>See profile</span>
+                            </div>
+                        </Link>
                     </ProfileLink>
                     <ul>
-                        <li><PrivacyIcon/>Privacy</li>
-                        <li><SettingsIcon/>Settings</li>
+                        <li><Link to="/testpage"><PrivacyIcon/>Privacy</Link></li>
+                        <li><Link to="/testpage"><SettingsIcon/>Settings</Link></li>
                     </ul>                    
                 </InnerWrapper>
                 <LogoutButton><LogoutIcon/>Logout</LogoutButton>
