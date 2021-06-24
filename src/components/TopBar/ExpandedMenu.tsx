@@ -1,5 +1,5 @@
 import { Settings } from 'http2';
-import React, { FC } from 'react'; 
+import React, { FC, useState, ChangeEvent } from 'react'; 
 import styled from 'styled-components';
 import { Colors } from '../../styledHelpers/Colors';
 
@@ -144,26 +144,38 @@ const ImageContainer = styled.div`
  
 `;
 export const ExpandedMenu: FC = () => {
+
+    const [inputText, setInputText] = useState<string>('');
+
+    const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        const text = e.target.value;
+        setInputText(text);
+    }
+
     return(
         <Wrapper>
             <MenuContainer>
                 <InnerWrapper>
-                    <FilterInput type="text" placeholder="Filter..."/>
+                    <FilterInput type="text" placeholder="Filter..." value={inputText} onChange={inputHandler} />
+                    
+                    
+                    
+                    
                     <span>Platform</span>
                     <ul>
-                        <li><Link to="/"><HomeIcon/>Home</Link></li>
-                        <li><Link to="/testpage"><PublicationsIcon/>Publications</Link></li>
-                        <li><Link to="/testpage"><PeopleIcon/>People</Link></li>
-                        <li><Link to="/entities"><EntitiesIcon/>Entities</Link></li>
-                        <li><Link to="/testpage"><AdministrationIcon/>Administration</Link></li>
+                        {'Home'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/"><HomeIcon/>Home</Link></li>}
+                        {'Publications'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><PublicationsIcon/>Publications</Link></li>}
+                        {'People'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><PeopleIcon/>People</Link></li>}
+                        {'Entities'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/entities"><EntitiesIcon/>Entities</Link></li>}
+                        {'Administration'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><AdministrationIcon/>Administration</Link></li>}                        
                     </ul>
                     <span>Workspaces</span>
                     <ul>
-                        <li><Link to="/testpage"><PublicationsIcon/>Client contract</Link></li>
-                        <li><Link to="/testpage"><PublicationsIcon/>Supplier contract</Link></li>
-                        <li><Link to="/testpage"><CorporateIcon/>Corporate</Link></li>
-                        <li><Link to="/testpage"><PeopleIcon/>Group Norms</Link></li>
-                        <li><Link to="/testpage"><PublicationsIcon/>Real estate contracts</Link></li>
+                        {'Client contract'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><PublicationsIcon/>Client contract</Link></li>}
+                        {'Supplier contract'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><PublicationsIcon/>Supplier contract</Link></li>}
+                        {'Corporate'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><CorporateIcon/>Corporate</Link></li>}
+                        {'Group Norms'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><PeopleIcon/>Group Norms</Link></li>}
+                        {'Real estate contracts'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/testpage"><PublicationsIcon/>Real estate contracts</Link></li>}
                     </ul>
                 </InnerWrapper>
             </MenuContainer>
