@@ -13,6 +13,7 @@ const WorkspacesContainer = styled.div `
     box-shadow: 0 4px 2px -2px #dee1e6;
     padding: 10px;
     position: relative;
+    overflow: hidden;
 `;
 
 const Workspace = styled.a `
