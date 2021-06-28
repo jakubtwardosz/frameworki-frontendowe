@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import { Reset } from 'styled-reset';
 import { Provider } from 'react-redux';
@@ -13,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Roboto', sans-serif;
   }  
-`
+`;  
 
 ReactDOM.render(
   <Provider store={store}>      

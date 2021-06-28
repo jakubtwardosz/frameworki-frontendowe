@@ -13,7 +13,6 @@ const defaultState = (): IUsers2Reducer => ({
 
 export default (state = defaultState(), action: any) => {
     switch(action.type) {
-
         case actionTypes.GET_USERS: {
             const data: actionTypes.IUserTypes['GET_USERS'] = action;
             return {
@@ -21,7 +20,6 @@ export default (state = defaultState(), action: any) => {
                 usersList: data.usersList
             }
         }
-
         case actionTypes.PUSH_DATA: {
             const data: actionTypes.IUserTypes['PUSH_DATA'] = action;
             return {
@@ -29,10 +27,6 @@ export default (state = defaultState(), action: any) => {
                 someData: data.someData
             }
         }
-
-        dafault: {
-            return state
-        }
- 
-    }
+        default: return state;
+      }    
 }
