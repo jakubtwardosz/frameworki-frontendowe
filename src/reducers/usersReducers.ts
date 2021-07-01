@@ -4,6 +4,7 @@ import * as actionTypes from '../actions/actionTypes/userTypes';
 export interface IUsersReducer {
     userList: ISingleUser[];
     someData: string;
+    
 }
 
 const defaultState = (): IUsersReducer => ({

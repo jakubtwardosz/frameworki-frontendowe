@@ -17,6 +17,7 @@ import { Resume } from '../Resume/Resume';
 import { Entities } from '../../entities/Entities';
 import { TestPage } from '../../testPage/TestPage';
 import { Profile } from '../../profile/Profile';
+import { useDispatch } from 'react-redux';
 
 const Wrapper = styled.div`
     background-color: ${Colors.culturedBackground};
@@ -34,9 +35,12 @@ const Content = styled.div`
 const RightContent = styled.div`
     flex: 1;
     margin-left: 40px;
-`; 
+`;
+
 
 const MainPage: FC = () => {
+    const dispatch = useDispatch();
+
     return (
         <Router>            
             <Wrapper>

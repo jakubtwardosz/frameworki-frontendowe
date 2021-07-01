@@ -1,10 +1,10 @@
-import { Settings } from 'http2';
-import React, { FC, useState, ChangeEvent } from 'react'; 
+import { FC, useState, ChangeEvent } from 'react'; 
 import styled from 'styled-components';
 import { Colors } from '../../styledHelpers/Colors';
 
 import { ExpandedMenuIcon } from '../../styledHelpers/Components';
 import { Link } from 'react-router-dom';
+
 
 const Wrapper = styled.div`
     position: absolute;
@@ -14,6 +14,7 @@ const Wrapper = styled.div`
     border: 1px solid ${Colors.cultured};
     border-radius: 5px;
     min-width: 280px;
+    z-index: 1;
     
 `;
 const FilterInput = styled.input`
@@ -144,6 +145,7 @@ const ImageContainer = styled.div`
  
 `;
 export const ExpandedMenu: FC = () => {
+    
 
     const [inputText, setInputText] = useState<string>('');
 
@@ -152,11 +154,14 @@ export const ExpandedMenu: FC = () => {
         setInputText(text);
     }
 
+   
+
     return(
         <Wrapper>
             <MenuContainer>
                 <InnerWrapper>
                     <FilterInput type="text" placeholder="Filter..." value={inputText} onChange={inputHandler} />
+                    
                     <span>Platform</span>
                     <ul>
                         {'Home'.toLowerCase().includes(inputText.toLowerCase()) && <li><Link to="/"><HomeIcon/>Home</Link></li>}

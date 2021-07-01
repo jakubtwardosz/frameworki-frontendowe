@@ -1,6 +1,12 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
+import { useSelector } from 'react-redux';
+import { IState } from '../../reducers';
+import { IUsersReducer } from '../../reducers/usersReducers';
+
+
+
 const Item = styled.div `
     background-color: #fff;
     box-shadow: 0 4px 2px -2px #dee1e6;
@@ -52,9 +58,17 @@ const Icon = styled.i `
     margin-right: 10px;
 `;
 
+
 export const ResumeItem: FC = () => {
+    
+    const { userList } = useSelector<IState, IUsersReducer>(state => ({
+        ...state.users
+    })); 
+
+
     return (
             <Item>
+                {userList.map(elem => elem)}
                 <h4>Contract #234</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor ut nunc sed ultricies. Sed turpis metus, interdum a vulputate ac, tristique in nisi.</p>
 

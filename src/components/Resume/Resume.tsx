@@ -2,6 +2,7 @@ import React, { FC, useState, ChangeEvent } from 'react';
 import styled from 'styled-components';
 import useDropdown from 'react-dropdown-hook';
 import { ResumeItem } from './ResumeItem';
+import ReactPaginate from 'react-paginate';
 
 const Wrapper = styled.div `
     h3{
@@ -82,9 +83,15 @@ export const Resume: FC = () => {
 
     const [inputText, setInputText] = useState<string>('');
 
+    const [currentPage, setCurrentPage] = useState<number>(0);
+
     const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const text = e.target.value;
         setInputText(text);
+    }
+
+    const handlePageClick = () => {
+
     }
 
     return ( 
@@ -116,7 +123,20 @@ export const Resume: FC = () => {
             <ResumeItem/>
             <ResumeItem/>  
 
-        </ResumeContainer>          
+        </ResumeContainer>
+
+         <ReactPaginate
+                    previousLabel={"prev"}
+                    nextLabel={"next"}
+                    breakLabel={"..."}
+                    breakClassName={"break-me"}
+                    pageCount={1}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={handlePageClick}
+                    containerClassName={"pagination"}
+                    activeClassName={"active"}/>
+                  
     </Wrapper>
     );
 };
